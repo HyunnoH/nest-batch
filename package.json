@@ -1,0 +1,15 @@
+{
+  "name": "nest-batch",
+  "version": "0.0.1",
+  "description": "Batch module for Nest.js application like Spring Batch",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nestjs",
+    "batch"
+  ],
+  "author": "Hyun Oh <hyunnoh01@gmail.com>",
+  "license": "MIT"
+}
