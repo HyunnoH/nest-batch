@@ -17,3 +17,9 @@ Batch module for Nest.js application like Spring Batch
 ## Installation
 
 TBD
+
+## License
+
+nest-batch is under the MIT license, see [LICENSE](./LICENSE) file for details.
+
+---
