@@ -1,6 +1,6 @@
-import { Step } from "../step/Step";
-import { Job } from "./Job";
-import { JobExecution } from "./JobExecution";
+import { Step } from "../interfaces/Step";
+import { Job } from "../interfaces/Job";
+import { JobExecution } from "../interfaces/JobExecution";
 
 export abstract class AbstractJob implements Job {
   isRestartable: boolean;
