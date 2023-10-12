@@ -4,7 +4,10 @@
   "description": "Batch module for Nest.js application like Spring Batch",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint src/**/*.ts --ignore-pattern src/**/*.spec.ts",
+    "test": "jest",
+    "prebuild": "rimraf dist/*",
+    "build": "tsc"
   },
   "keywords": [
     "nestjs",
