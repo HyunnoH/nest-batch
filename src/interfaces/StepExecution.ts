@@ -4,8 +4,7 @@ import { JobExecution } from "./JobExecution";
 
 export class StepExecution extends Entity {
   readonly stepName: string;
-
-  private jobExecution: JobExecution;
+  readonly jobExecution: JobExecution;
   private _skipCount: number;
 
   status: BatchStatus;
