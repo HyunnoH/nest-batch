@@ -1,4 +1,4 @@
-import { StepExecution } from "../../interfaces/StepExecution";
+import { StepExecution } from "../../core/StepExecution";
 
 export type Runnable = () => unknown;
 
