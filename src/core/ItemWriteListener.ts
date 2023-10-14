@@ -1,4 +1,4 @@
-import { Chunk } from "../item/Chunk";
+import { Chunk } from "./item/Chunk";
 import { StepListener } from "./StepListener";
 
 export interface ItemWriteListener<S> extends StepListener {
