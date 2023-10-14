@@ -12,7 +12,7 @@ export class BatchStatus extends EnumType<BatchStatus>() {
   static readonly UNKNOWN = new BatchStatus(8, "UNKNOWN");
 
   static max(status1: BatchStatus, status2: BatchStatus) {
-    return status1.isGreaterThan(status2);
+    return status1.isGreaterThan(status2) ? status1 : status2;
   }
 
   isRunning() {
