@@ -3,5 +3,5 @@ import { JobExecution } from "../interfaces/JobExecution";
 import { JobParameters } from "../interfaces/JobParameters";
 
 export interface JobLauncher {
-  run(job: Job, jobParameters: JobParameters): JobExecution;
+  run(job: Job, jobParameters: JobParameters): Promise<JobExecution>;
 }
