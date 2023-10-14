@@ -1,7 +1,7 @@
-import { JobExecution } from "../core/JobExecution";
-import { JobInstance } from "../core/JobInstance";
-import { JobParameters } from "../core/JobParameters";
-import { StepExecution } from "../core/StepExecution";
+import { JobExecution } from "../JobExecution";
+import { JobInstance } from "../JobInstance";
+import { JobParameters } from "../JobParameters";
+import { StepExecution } from "../StepExecution";
 
 export interface JobRepository {
   add(stepExecution: StepExecution): Promise<void>;
