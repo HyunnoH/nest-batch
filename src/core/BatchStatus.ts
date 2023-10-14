@@ -24,7 +24,9 @@ export class BatchStatus extends EnumType<BatchStatus>() {
   }
 
   isUnsuccessful() {
-    this === BatchStatus.FAILED || this.isGreaterThan(BatchStatus.FAILED);
+    return (
+      this === BatchStatus.FAILED || this.isGreaterThan(BatchStatus.FAILED)
+    );
   }
 
   upgradeTo(other: BatchStatus) {
