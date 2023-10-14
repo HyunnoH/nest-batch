@@ -1,4 +1,4 @@
-import { ChunkContext } from "../scope/context/ChunkContext";
+import { ChunkContext } from "./scope/context/ChunkContext";
 import { StepListener } from "./StepListener";
 
 export interface ChunkListener extends StepListener {

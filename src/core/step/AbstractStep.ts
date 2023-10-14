@@ -1,5 +1,5 @@
-import { Step } from "../core/Step";
-import { StepExecution } from "../core/StepExecution";
+import { Step } from "../Step";
+import { StepExecution } from "../StepExecution";
 
 export abstract class AbstractStep implements Step {
   isAllowStartingIfComplete: boolean;
