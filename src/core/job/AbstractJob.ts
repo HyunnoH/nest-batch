@@ -10,7 +10,7 @@ export abstract class AbstractJob implements Job {
     this.name = name || "";
   }
 
-  abstract getStep(stepName: string): Step;
+  abstract getStep(stepName: string): Step | undefined;
 
   async execute(jobExecution: JobExecution): Promise<void> {}
 }
