@@ -6,7 +6,7 @@ import { JobExecutionListener } from "../JobExecutionListener";
 import { BatchStatus } from "../BatchStatus";
 
 export abstract class AbstractJob implements Job {
-  isRestartable: boolean;
+  isRestartable: boolean = true;
   name: string;
   jobRepository: JobRepository;
 
