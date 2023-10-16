@@ -10,18 +10,18 @@ export abstract class AbstractJob implements Job {
   name: string;
   jobRepository: JobRepository;
 
-  protected jobExecutionListeners: JobExecutionListener[];
+  protected listeners: JobExecutionListener[] = [];
 
   constructor(name?: string) {
     this.name = name || "";
   }
 
   registerJobExecutionListener(listener: JobExecutionListener) {
-    this.jobExecutionListeners.push(listener);
+    this.listeners.push(listener);
   }
 
   setJobExecutionListeners(listeners: JobExecutionListener[]) {
-    this.jobExecutionListeners = listeners;
+    this.listeners = listeners;
   }
 
   abstract getStep(stepName: string): Step | undefined;
@@ -31,13 +31,13 @@ export abstract class AbstractJob implements Job {
   protected abstract doExecute(jobExecution: JobExecution): Promise<void>;
 
   async execute(jobExecution: JobExecution): Promise<void> {
-    this.jobExecutionListeners.forEach((listener) => {
+    this.listeners.forEach((listener) => {
       listener.beforeJob(jobExecution);
     });
     await this.doExecute(jobExecution);
     jobExecution.upgradeStatus(BatchStatus.COMPLETED);
     await this.jobRepository.update(jobExecution);
-    this.jobExecutionListeners.forEach((listener) => {
+    this.listeners.forEach((listener) => {
       listener.afterJob(jobExecution);
     });
   }
