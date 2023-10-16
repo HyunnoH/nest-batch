@@ -16,10 +16,6 @@ export class SimpleJob extends AbstractJob {
     this._steps = steps;
   }
 
-  async execute(jobExecution: JobExecution): Promise<void> {
-    this.doExecute(jobExecution);
-  }
-
   addStep(step: Step) {
     this._steps.push(step);
   }
